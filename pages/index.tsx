@@ -1,12 +1,21 @@
-import Link from "next/link";
+import Link from 'next/link';
+import Head from 'next/head';
 
-function Casa() {
+function Inicio() {
     return (
         <div>
-            <h1>Casa</h1>
-            <a><Link href="/sobre">Sobre</Link></a>
+            <Head>
+                <link rel="icon" href="/icons/favicon.ico" />
+                <title>Kaio HSG - Venda de Carros</title>
+            </Head>
+            <h1>Página Inicial</h1>
+            <ul>
+                <li><Link href="/entrar">Entrar</Link></li>
+                <li><Link href='/registrar'>Registrar</Link></li>
+                <li><Link href="/sobre">Sobre</Link></li>
+            </ul>
         </div>
     )
 }
 
-export default Casa
+export default Inicio
