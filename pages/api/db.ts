@@ -1,5 +1,7 @@
 import { Client } from 'pg';
 
+require('dotenv').config()
+
 const client = new Client({
     user: process.env.PG_USER, // seu usuário do PostgreSQL
     host: process.env.PG_HOST,
