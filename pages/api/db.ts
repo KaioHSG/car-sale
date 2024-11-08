@@ -8,6 +8,9 @@ const client = new Client({
     database: process.env.PG_DATABASE,   // nome do banco de dados que você criou
     password: process.env.PG_PASSWORD, // sua senha do PostgreSQL
     port: process.env.PG_PORT,
+    ssl: {
+      rejectUnauthorized: false, // Aceita qualquer certificado SSL
+    }
 });
 
 client.connect();

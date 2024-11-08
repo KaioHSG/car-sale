@@ -5,7 +5,7 @@ function Inicio() {
     return (
         <div>
             <Head>
-                <link rel="icon" href="/icons/favicon.ico" />
+                <link rel="icon" href="/favicon.ico" />
                 <title>Kaio HSG - Venda de Carros</title>
             </Head>
             <h1>Página Inicial</h1>
