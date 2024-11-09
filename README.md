@@ -65,7 +65,7 @@ PG_DATABASE=car_sale
 PG_HOST=localhost
 PG_PASSWORD=sua_senha
 PG_PORT=5432
-PG_USER=seu_usuario
+PG_USER=postgres
 ```
 
 6. Execute o projeto.
