@@ -51,7 +51,7 @@ cd car-sale
 npm install
 ```
 
-4. Entre no Postgres e crie o banco de dados.
+4. Entre no Postgre e crie o banco de dados.
 
 ``` shell
 psql -U postgres
