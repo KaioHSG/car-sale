@@ -38,7 +38,7 @@
 
 1. Instale o [Node.js](https://nodejs.org/pt/download), [PostgreSQL](https://www.postgresql.org/download) e [Git](https://git-scm.com/downloads).
 
-2. Clone o repositório.
+2. Clone o repositório e entre nele.
 
 ``` shell
 git clone https://github.com/KaioHSG/car-sale
@@ -51,14 +51,32 @@ cd car-sale
 npm install
 ```
 
-4. Crie o banco de dados.
+4. Entre no Postgres e crie o banco de dados.
 
 ``` shell
 psql -U postgres
+```
+
+``` sql
 CREATE DATABASE car_sale;
 ```
 
-5. Configure as variáveis de ambiente.
+5. Acesse o banco de dados e crie a tabela de usuários.
+
+``` shell
+\c car_sale
+```
+
+``` sql
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+```
+
+6. Configure as variáveis de ambiente.
 
 ``` dotenv
 PG_DATABASE=car_sale
@@ -68,10 +86,10 @@ PG_PORT=5432
 PG_USER=postgres
 ```
 
-6. Execute o projeto.
+7. Execute o projeto.
 
 ``` shell
 npm run dev
 ```
 
-7. Acesse em seu navegador [`http://localhost:3000`](http://localhost:3000 ).
+8. Acesse em seu navegador [`http://localhost:3000`](http://localhost:3000 ).
