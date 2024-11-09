@@ -40,20 +40,20 @@
 
 2. Clone o repositório.
 
-``` bash
+``` shell
 git clone https://github.com/KaioHSG/car-sale
 cd car-sale
 ```
 
 3. Instale as dependências.
 
-``` bash
+``` shell
 npm install
 ```
 
 4. Crie o banco de dados.
 
-``` bash
+``` shell
 psql -U postgres
 CREATE DATABASE car_sale;
 ```
@@ -70,7 +70,7 @@ PG_USER=seu_usuario
 
 6. Execute o projeto.
 
-``` bash
+``` shell
 npm run dev
 ```
 
