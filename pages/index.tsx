@@ -13,6 +13,8 @@ function Inicio() {
                 <li><Link href="/entrar">Entrar</Link></li>
                 <li><Link href='/registrar'>Registrar</Link></li>
                 <li><Link href="/sobre">Sobre</Link></li>
+                <li><Link href="/usuario">Lista de usuários</Link></li>
+                <li><Link href="/veiculo">Lista de veículos</Link></li>
             </ul>
         </div>
     )

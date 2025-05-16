@@ -1,4 +1,3 @@
-// VeiclesList.tsx
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -28,9 +27,9 @@ const ListaVeicles: React.FC = () => {
         // Extrai os dados da resposta como JSON
         const data = await response.json();
 
-        // Verifica se a chave `cars_ids` está presente
-        if (data.cars_ids && Array.isArray(data.cars_ids)) {
-          setVeiclesIds(data.cars_ids); // Atualiza os IDs
+        // Verifica se a chave `veicles_ids` está presente
+        if (data.veicles_ids && Array.isArray(data.veicles_ids)) {
+          setVeiclesIds(data.veicles_ids); // Atualiza os IDs
         } else {
           setError('Resposta inválida da API');
         }
@@ -48,6 +47,7 @@ const ListaVeicles: React.FC = () => {
   return (
     <div>
       <h1>Lista de IDs de Veículos</h1>
+      <Link href='/'>Página Inicial</Link>
 
       {loading && <p>Carregando...</p>}
 
@@ -57,12 +57,12 @@ const ListaVeicles: React.FC = () => {
         <ul>
           {VeiclesIds.map((id) => (
             <li key={id}>
-                <Link href={`/Veicles/${id}`}>{id}</Link>
+                <Link href={`/veiculo/${id}`}>{id}</Link>
             </li>
           ))}
         </ul>
       ) : (
-        !loading && <p>Não há Veicles registrados.</p>
+        !loading && <p>Não há veículos registrados.</p>
       )}
     </div>
   );

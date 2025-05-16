@@ -3,7 +3,7 @@ import db from './db';  // Certifique-se de que o db está exportando sua conex�
 async function lista(request, response) {
     try {
         // Consulta no banco para pegar os IDs
-        const result = await db.query('SELECT id FROM veicles'); // Substitua "your_table_name" pelo nome correto da tabela.
+        const result = await db.query('SELECT id FROM users'); // Substitua "your_table_name" pelo nome correto da tabela.
         const ids = result.rows.map((row: { id: number }) => row.id); // Extrai apenas os IDs
 
         // Cabeçalho de cache
@@ -11,7 +11,7 @@ async function lista(request, response) {
 
         // Resposta com os IDs
         response.json({
-            veicles_ids: ids
+            users_ids: ids
         });
     } catch (error) {
         console.error('Erro ao buscar IDs:', error);

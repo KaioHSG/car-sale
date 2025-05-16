@@ -1,4 +1,5 @@
 import db from '../api/db';
+import Link from 'next/link';
 
 export async function getStaticPaths() {
 
@@ -30,10 +31,11 @@ function Veiculo({ vehicle }) {
     return (
         <div>
             <h1>Informações do Veículo</h1>
+            <Link href='/'>Página Inicial</Link>
             <p><strong>ID:</strong> {vehicle.id}</p>
             <p><strong>Nome:</strong> {vehicle.name}</p>
-            <p><strong>Modelo:</strong> {vehicle.model}</p>
             <p><strong>Preço:</strong> R$ {vehicle.price}</p>
+            <p><strong>ID do dono:</strong> <Link href={`/usuario/${vehicle.owner_id}`}>{vehicle.owner_id}</Link></p>
         </div>
     );
 }
