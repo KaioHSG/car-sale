@@ -33,7 +33,7 @@ function Registrar() {
 
         const data = await res.json();
         if (res.ok) {
-            router.push('/entrar');
+            router.push('/perfil/entrar');
         } else {
             // Mostra mensagem de erro
             setErrorMessage(data.message || 'Erro desconhecido');
@@ -45,8 +45,14 @@ function Registrar() {
             <Head>
                 <title>Registrar | Kaio HSG - Venda de Carros</title>
             </Head>
-            <h1>Registrar</h1>
-            <Link href='/'>Página Inicial</Link>
+            <h1>Car Sale</h1>
+            <ul>
+                <li><Link href='/'>Página Inicial</Link></li>
+                <li><Link href="/usuario">Lista de usuários</Link></li>
+                <li><Link href="/veiculo">Lista de veículos</Link></li>
+                <li><Link href="/sobre">Sobre</Link></li>
+            </ul>
+            <h2>Registrar</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input 
@@ -81,9 +87,7 @@ function Registrar() {
                     </button>
                 </div>
                 {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
-                <div>
-                    <Link href='/entrar'>Entrar</Link>
-                </div>
+                <p><Link href='/perfil/entrar'>Entrar</Link></p>
             </form>
         </div>
     );

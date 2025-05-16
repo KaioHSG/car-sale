@@ -21,7 +21,7 @@ function Perfil() {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
-            router.push('/entrar'); // Redireciona se não estiver logado
+            router.push('/perfil/entrar'); // Redireciona se não estiver logado
             return;
         }
 
@@ -59,7 +59,7 @@ function Perfil() {
             localStorage.removeItem('token'); // Remove o token ao excluir a conta
             setSuccessMessage('Conta excluída com sucesso.');
             setTimeout(() => {
-                router.push('/entrar'); // Redireciona para a página de login após a exclusão
+                router.push('/perfil/entrar'); // Redireciona para a página de login após a exclusão
             }, 2000);
         } else {
             setErrorMessage(data.message || 'Erro ao excluir a conta.');
@@ -75,8 +75,14 @@ function Perfil() {
             <Head>
                 <title>Perfil | Kaio HSG - Venda de Carros</title>
             </Head>
-            <h1>Perfil</h1>
-            <Link href='/'>Página Inicial</Link>
+            <h1>Car Sale</h1>
+            <ul>
+                <li><Link href='/'>Página Inicial</Link></li>
+                <li><Link href="/usuario">Lista de usuários</Link></li>
+                <li><Link href="/veiculo">Lista de veículos</Link></li>
+                <li><Link href="/sobre">Sobre</Link></li>
+            </ul>
+            <h2>Perfil</h2>
             <div>
                 <p><strong>ID:</strong> {user.id}</p>
                 <p><strong>Nome:</strong> {user.name}</p>
@@ -85,11 +91,11 @@ function Perfil() {
             <div>
                 <button onClick={() => {
                     localStorage.removeItem('token'); // Limpa o token ao sair
-                    router.push('/entrar'); // Redireciona para a página de login
+                    router.push('/perfil/entrar'); // Redireciona para a página de login
                 }}>Sair</button>
             </div>
 
-            <h2>Excluir Conta</h2>
+            <h3>Excluir Conta</h3>
             {successMessage && <div style={{ color: 'green' }}>{successMessage}</div>}
             {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
             <input 

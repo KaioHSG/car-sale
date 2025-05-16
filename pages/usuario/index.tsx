@@ -46,8 +46,14 @@ const ListaUsers: React.FC = () => {
 
   return (
     <div>
-      <h1>Lista de IDs de Veículos</h1>
-      <Link href='/'>Página Inicial</Link>
+      <h1>Car Sale</h1>
+      <ul>
+        <li><Link href='/'>Página Inicial</Link></li>
+        <li><Link href="/perfil">Meu perfil</Link></li>
+        <li><Link href="/veiculo">Lista de veículos</Link></li>
+        <li><Link href="/sobre">Sobre</Link></li>
+      </ul>
+      <h2>Lista de IDs de Usuários</h2>
 
       {loading && <p>Carregando...</p>}
 

@@ -37,8 +37,14 @@ function Entrar() {
             <Head>
                 <title>Entrar | Kaio HSG - Venda de Carros</title>
             </Head>
-            <h1>Entrar</h1><br />
-            <Link href='/'>Página Inicial</Link>
+            <h1>Car Sale</h1>
+            <ul>
+                <li><Link href='/'>Página Inicial</Link></li>
+                <li><Link href="/usuario">Lista de usuários</Link></li>
+                <li><Link href="/veiculo">Lista de veículos</Link></li>
+                <li><Link href="/sobre">Sobre</Link></li>
+            </ul>
+            <h2>Entrar</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input 
@@ -62,7 +68,7 @@ function Entrar() {
                     <button type="submit">Entrar</button>
                 </div>
                 <p><a href="#">Esqueci minha senha</a></p>
-                <p><Link href='/registrar'>Registrar</Link></p>
+                <p><Link href='/perfil/registrar'>Registrar</Link></p>
             </form>
         </div>
     );
