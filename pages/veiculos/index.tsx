@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface Carro {
   id: number;
@@ -46,11 +47,14 @@ const ListaVeicles: React.FC = () => {
 
   return (
     <div>
-      <h1>Car Sale</h1>
+      <Head>
+        <title>Veículos | HSG Veicle Sales</title>
+      </Head>
+      <h1>HSG Veicle Sales</h1>
         <ul>
           <li><Link href='/'>Página Inicial</Link></li>
           <li><Link href="/perfil">Meu perfil</Link></li>
-          <li><Link href="/usuario">Lista de usuários</Link></li>
+          <li><Link href="/usuarios">Lista de usuários</Link></li>
           <li><Link href="/sobre">Sobre</Link></li>
         </ul>
       <h2>Lista de IDs de Veículos</h2>
@@ -63,7 +67,7 @@ const ListaVeicles: React.FC = () => {
         <ul>
           {VeiclesIds.map((id) => (
             <li key={id}>
-                <Link href={`/veiculo/${id}`}>{id}</Link>
+                <Link href={`/veiculos/${id}`}>{id}</Link>
             </li>
           ))}
         </ul>

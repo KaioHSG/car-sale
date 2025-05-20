@@ -43,13 +43,13 @@ function Registrar() {
     return (
         <div>
             <Head>
-                <title>Registrar | Kaio HSG - Venda de Carros</title>
+                <title>Registrar | HSG Veicle Sales</title>
             </Head>
-            <h1>Car Sale</h1>
+            <h1>HSG Veicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
-                <li><Link href="/usuario">Lista de usuários</Link></li>
-                <li><Link href="/veiculo">Lista de veículos</Link></li>
+                <li><Link href="/usuarios">Lista de usuários</Link></li>
+                <li><Link href="/veiculos">Lista de veículos</Link></li>
                 <li><Link href="/sobre">Sobre</Link></li>
             </ul>
             <h2>Registrar</h2>

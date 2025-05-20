@@ -30,19 +30,19 @@ export async function getStaticProps(context) {
 function Veiculo({ vehicle }) {
     return (
         <div>
-            <h1>Car Sale</h1>
+            <h1>HSG Veicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
                 <li><Link href="/perfil">Meu perfil</Link></li>
-                <li><Link href="/usuario">Lista de usuários</Link></li>
-                <li><Link href="/veiculo">Lista de veículos</Link></li>
+                <li><Link href="/usuarios">Lista de usuários</Link></li>
+                <li><Link href="/veiculos">Lista de veículos</Link></li>
                 <li><Link href="/sobre">Sobre</Link></li>
             </ul>
             <h2>Informações do Veículo</h2>
             <p><strong>ID:</strong> {vehicle.id}</p>
             <p><strong>Nome:</strong> {vehicle.name}</p>
             <p><strong>Preço:</strong> R$ {vehicle.price}</p>
-            <p><strong>ID do dono:</strong> <Link href={`/usuario/${vehicle.owner_id}`}>{vehicle.owner_id}</Link></p>
+            <p><strong>ID do dono:</strong> <Link href={`/usuarios/${vehicle.owner_id}`}>{vehicle.owner_id}</Link></p>
         </div>
     );
 }
