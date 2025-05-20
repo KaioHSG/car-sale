@@ -73,9 +73,9 @@ function Perfil() {
     return (
         <div>
             <Head>
-                <title>Perfil | HSG Veicle Sales</title>
+                <title>Perfil | HSG Vehicle Sales</title>
             </Head>
-            <h1>HSG Veicle Sales</h1>
+            <h1>HSG Vehicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
                 <li><Link href="/usuarios">Lista de usuários</Link></li>

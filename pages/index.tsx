@@ -6,9 +6,9 @@ function Inicio() {
         <div>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <title>HSG Veicle Sales - Venda de Carros</title>
+                <title>HSG Vehicle Sales - Venda de Carros</title>
             </Head>
-            <h1>HSG Veicle Sales</h1>
+            <h1>HSG Vehicle Sales</h1>
             <ul>
                 <li><Link href="/perfil">Meu perfil</Link></li>
                 <li><Link href="/usuarios">Lista de usuários</Link></li>

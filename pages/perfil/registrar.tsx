@@ -43,9 +43,9 @@ function Registrar() {
     return (
         <div>
             <Head>
-                <title>Registrar | HSG Veicle Sales</title>
+                <title>Registrar | HSG Vehicle Sales</title>
             </Head>
-            <h1>HSG Veicle Sales</h1>
+            <h1>HSG Vehicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
                 <li><Link href="/usuarios">Lista de usuários</Link></li>

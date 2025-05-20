@@ -48,9 +48,9 @@ const ListaUsers: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Usuários | HSG Veicle Sales</title>
+        <title>Usuários | HSG Vehicle Sales</title>
       </Head>
-      <h1>HSG Veicle Sales</h1>
+      <h1>HSG Vehicle Sales</h1>
       <ul>
         <li><Link href='/'>Página Inicial</Link></li>
         <li><Link href="/perfil">Meu perfil</Link></li>

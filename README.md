@@ -1,4 +1,4 @@
-# HSG Veicle Sales
+# HSG Vehicle Sales
 
 *Um projeto de um marketplace veicular.*
 

@@ -6,13 +6,13 @@ interface Carro {
   id: number;
 }
 
-const ListaVeicles: React.FC = () => {
-  const [VeiclesIds, setVeiclesIds] = useState<number[]>([]);
+const ListaVehicles: React.FC = () => {
+  const [VehiclesIds, setVehiclesIds] = useState<number[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchVeiclesIds = async () => {
+    const fetchVehiclesIds = async () => {
       setLoading(true);
       setError(null); // Resetando o erro
       try {
@@ -30,7 +30,7 @@ const ListaVeicles: React.FC = () => {
 
         // Verifica se a chave `veicles_ids` está presente
         if (data.veicles_ids && Array.isArray(data.veicles_ids)) {
-          setVeiclesIds(data.veicles_ids); // Atualiza os IDs
+          setVehiclesIds(data.veicles_ids); // Atualiza os IDs
         } else {
           setError('Resposta inválida da API');
         }
@@ -42,15 +42,15 @@ const ListaVeicles: React.FC = () => {
       }
     };
 
-    fetchVeiclesIds();
+    fetchVehiclesIds();
   }, []);
 
   return (
     <div>
       <Head>
-        <title>Veículos | HSG Veicle Sales</title>
+        <title>Veículos | HSG Vehicle Sales</title>
       </Head>
-      <h1>HSG Veicle Sales</h1>
+      <h1>HSG Vehicle Sales</h1>
         <ul>
           <li><Link href='/'>Página Inicial</Link></li>
           <li><Link href="/perfil">Meu perfil</Link></li>
@@ -63,9 +63,9 @@ const ListaVeicles: React.FC = () => {
 
       {error && <p>{error}</p>}
 
-      {VeiclesIds.length > 0 ? (
+      {VehiclesIds.length > 0 ? (
         <ul>
-          {VeiclesIds.map((id) => (
+          {VehiclesIds.map((id) => (
             <li key={id}>
                 <Link href={`/veiculos/${id}`}>{id}</Link>
             </li>
@@ -78,4 +78,4 @@ const ListaVeicles: React.FC = () => {
   );
 };
 
-export default ListaVeicles;
+export default ListaVehicles;
