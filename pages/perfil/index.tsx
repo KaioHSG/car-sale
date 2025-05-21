@@ -86,7 +86,7 @@ function Perfil() {
             <div>
                 <p><strong>ID:</strong> {user.id}</p>
                 <p><strong>Nome:</strong> {user.name}</p>
-                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>E-mail:</strong> {user.email}</p>
             </div>
             <div>
                 <button onClick={() => {

@@ -41,7 +41,7 @@ function Veiculo({ users }) {
             <h2>Informações do Usuário</h2>
             <p><strong>ID:</strong> {users.id}</p>
             <p><strong>Nome:</strong> {users.name}</p>
-            <p><strong>Email:</strong> {users.email}</p>
+            <p><strong>E-mail:</strong> {users.email}</p>
         </div>
     );
 }

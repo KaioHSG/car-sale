@@ -60,16 +60,16 @@ function Registrar() {
                         placeholder="Nome" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)} 
-                        required 
+                        required
                     />
                 </div>
                 <div>
                     <input 
                         type="email" 
-                        placeholder="Email" 
+                        placeholder="E-mail" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
-                        required 
+                        required
                     />
                 </div>
                 <div>
@@ -78,8 +78,22 @@ function Registrar() {
                         placeholder="Senha" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
-                        required 
+                        required
                     />
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        required
+                    />
+                    Estou ciente e concordo que meu e-mail ficará visível publicamente no meu perfil. 
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        required
+                    />
+                    Estou ciente e concordo com os termos descritos <Link href='/termos' target='_blank'>aqui</Link>.
                 </div>
                 <div>
                     <button type="submit" disabled={loading}>

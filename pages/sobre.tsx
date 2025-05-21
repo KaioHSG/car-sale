@@ -17,6 +17,7 @@ function Sobre() {
             <h2>Sobre</h2>
             <p>Este é um pequeno projeto para criar um modelo de site de venda de veículos 100% gratuito, utilizando apenas ferramentas totalmente gratuitas.</p>
             <p>Saiba mais sobre o projeto em sua <a href="https://github.com/KaioHSG/car-sale" target='_blank'>página do GitHub</a>.</p>
+            <p>Saiba sobre os termos do site em sua <Link href='/termos'>página de termos</Link>.</p>
         </div>
     )
 }
