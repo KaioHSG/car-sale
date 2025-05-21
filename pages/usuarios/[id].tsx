@@ -1,5 +1,6 @@
 import db from '../api/db';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export async function getStaticPaths() {
 
@@ -30,6 +31,9 @@ export async function getStaticProps(context) {
 function Veiculo({ users }) {
     return (
         <div>
+            <Head>
+                <title>{`Usuário - ${users.id} | HSG Vehicle Sales`}</title>
+            </Head>
             <h1>HSG Vehicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
