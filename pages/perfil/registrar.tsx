@@ -48,6 +48,7 @@ function Registrar() {
             <h1>HSG Vehicle Sales</h1>
             <ul>
                 <li><Link href='/'>Página Inicial</Link></li>
+                <li><Link href="/perfil">Meu perfil</Link></li>
                 <li><Link href="/usuarios">Lista de usuários</Link></li>
                 <li><Link href="/veiculos">Lista de veículos</Link></li>
                 <li><Link href="/sobre">Sobre</Link></li>
