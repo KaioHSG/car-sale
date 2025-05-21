@@ -13,6 +13,7 @@ function Sobre() {
                 <li><Link href="/perfil">Meu perfil</Link></li>
                 <li><Link href="/usuarios">Lista de usuários</Link></li>
                 <li><Link href="/veiculos">Lista de veículos</Link></li>
+                <li><Link href="/sobre">Sobre</Link></li>
             </ul>
             <h2>Sobre</h2>
             <p>Este é um pequeno projeto para criar um modelo de site de venda de veículos 100% gratuito, utilizando apenas ferramentas totalmente gratuitas.</p>

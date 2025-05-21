@@ -51,12 +51,13 @@ const ListaUsers: React.FC = () => {
         <title>Usuários | HSG Vehicle Sales</title>
       </Head>
       <h1>HSG Vehicle Sales</h1>
-      <ul>
-        <li><Link href='/'>Página Inicial</Link></li>
-        <li><Link href="/perfil">Meu perfil</Link></li>
-        <li><Link href="/veiculos">Lista de veículos</Link></li>
-        <li><Link href="/sobre">Sobre</Link></li>
-      </ul>
+        <ul>
+          <li><Link href='/'>Página Inicial</Link></li>
+          <li><Link href="/perfil">Meu perfil</Link></li>
+          <li><Link href="/usuarios">Lista de usuários</Link></li>
+          <li><Link href="/veiculos">Lista de veículos</Link></li>
+          <li><Link href="/sobre">Sobre</Link></li>
+        </ul>
       <h2>Lista de IDs de Usuários</h2>
 
       {loading && <p>Carregando...</p>}
